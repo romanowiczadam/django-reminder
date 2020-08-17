@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from reminderapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signup/', views.signupuser, name='signupuser'),
+    path('current/', views.current_r, name='current_r'),
 ]
